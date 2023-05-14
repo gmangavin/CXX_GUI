@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "beta": "code-text-binary",
+        "iostream": "cpp"
+    }
+}
