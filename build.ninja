@@ -1,0 +1,17 @@
+cxx = g++
+cxxflags = -Wall -IH:/Coding/01_Libs/SDL2/x64/include/SDL2    
+ldflags = -LH:/Coding/01_Libs/SDL2/x64/lib -lSDL2 -lSDL2main
+
+# Define the rule to compile C++ source files into object files
+rule cxx_compile
+  command = $cxx $cxxflags -c $in -o $out
+
+# Define the rule to link object files into an executable
+rule link
+  command = $cxx $ldflags $in -o $out
+
+# Build main.o from main.cxx using the cxx_compile rule
+build ./build/guiapp.o: cxx_compile ./src/guiapp.cxx
+
+# Build the final executable from main.o using the link rule
+build main: link ./build/guiapp.o

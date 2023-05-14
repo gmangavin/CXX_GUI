@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/users/gavin/dev/vcpkg/installed/x64-windows-static/include/**"
+                "H:/Coding/01_Libs/SDL2/include"
             ],
             "defines": [
                 "_DEBUG",
